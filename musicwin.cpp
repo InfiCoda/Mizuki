@@ -97,7 +97,7 @@ void MusicWin::initBtn()
     play->setGeometry(x+120,y-5,btnSize+10,btnSize+10);
     add->setGeometry(x+300,y+5,btnSize-10,btnSize-10);
     clear->setGeometry(x-35,y+5,btnSize-15,btnSize-15);
-    play->hide();
+    pause->hide();
 
     //连接按钮信号与对应槽函数
     connect(play,&QPushButton::clicked,this,&MusicWin::playBtnPush);
@@ -181,25 +181,26 @@ void MusicWin::initMedia()
 
 void MusicWin::playBtnPush()
 {
-    if(gifSwitch)
-        gifSwitch=0;
-    else
-        gifSwitch=1;
-    play->hide();
-    pause->show();
-    player->pause();
-}
-void MusicWin::pauseBtnPush()
-{
     if(player->state()==QMediaPlayer::PausedState){
         if(gifSwitch)
             gifSwitch=0;
         else
             gifSwitch=1;
-        pause->hide();
-        play->show();
+        play->hide();
+        pause->show();
         player->play();
     }
+}
+void MusicWin::pauseBtnPush()
+{
+    if(gifSwitch)
+        gifSwitch=0;
+    else
+        gifSwitch=1;
+
+    pause->hide();
+    play->show();
+    player->pause();
 }
 
 void MusicWin::nextBtnPush()
@@ -240,9 +241,10 @@ void MusicWin::addBtnPush()
             gifSwitch=0;
         else
             gifSwitch=1;
+
         playlist->setCurrentIndex(0);
-        play->show();
-        pause->hide();
+        pause->show();
+        play->hide();
         player->play();
     }
 
@@ -256,8 +258,6 @@ void MusicWin::clearBtnPush()
         player->stop();
         disconnect(playlist,&QMediaPlaylist::currentMediaChanged,this,&MusicWin::musicChangeEvent);
         playlist->clear();
-//        player->setMedia(nullptr);
-//        player->setPlaylist(nullptr);
         fileList.clear();
         musicList->clear();
         musicList->setPlainText("播放队列：");
