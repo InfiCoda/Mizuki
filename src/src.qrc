@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>MizukiGif/move.gif</file>
+        <file>MizukiIcon/musicIcon/add.png</file>
+        <file>MizukiIcon/musicIcon/last.png</file>
+        <file>MizukiIcon/musicIcon/music.png</file>
+        <file>MizukiIcon/musicIcon/next.png</file>
+        <file>MizukiIcon/musicIcon/pause.png</file>
+        <file>MizukiIcon/musicIcon/play.png</file>
+        <file>MizukiIcon/buttonIcon/add.png</file>
+        <file>MizukiIcon/buttonIcon/close.png</file>
+        <file>MizukiIcon/buttonIcon/del.png</file>
+        <file>MizukiIcon/buttonIcon/fold.png</file>
+        <file>MizukiIcon/buttonIcon/more.png</file>
+        <file>MizukiIcon/buttonIcon/setwin.png</file>
+        <file>MizukiIcon/buttonIcon/timer.png</file>
+        <file>MizukiIcon/buttonIcon/unfold.png</file>
+        <file>MizukiGif/normal.gif</file>
+        <file>MizukiGif/question.gif</file>
+        <file>MizukiGif/timer.gif</file>
+        <file>MizukiPng/musicIcon.png</file>
+        <file>MizukiPng/tray.png</file>
+        <file>MizukiIcon/musicIcon/del.png</file>
+        <file>MizukiIcon/buttonIcon/up.png</file>
+        <file>MizukiIcon/buttonIcon/down.png</file>
+        <file>MizukiPng/handle.png</file>
+        <file>MizukiPng/timer.png</file>
+    </qresource>
+</RCC>
